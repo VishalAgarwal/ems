@@ -1,0 +1,11 @@
+<div>
+	<p>Latest Order</p>
+	{% for i in latest_order.products.values %}
+		<p>{{i.0}}</p>
+	{% endfor %}
+	<a href="/ems/contact/">Create Exchange Request</a>	
+</div>
+<div>
+	<p>Exchange Request</p>
+	<p>{{ex_req_id}}</p>
+</div>
