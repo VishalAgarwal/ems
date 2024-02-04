@@ -1,0 +1,22 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'ems/style.css' %}">
+<link rel="stylesheet" href="https://bootswatch.com/5/sandstone/bootstrap.min.css">
+
+<div id="ems_container">
+    <div class="ems_container_item" id="description">
+        <div>
+            <h1 id="kidipoo_logo">Kidipoo</h1>
+            <h2 id="page_description">Exchange Center</h2>
+        </div>
+    </div>
+    <div class="ems_container_item" id="form-div-container">
+        <div class="form-div">
+            <form action="/ems/" method="post">
+                {% csrf_token %}
+                {{ form }}
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </div>
+  </div>
+</div>
